@@ -1,0 +1,56 @@
+<div class="container" *ngIf="peliculascg3">
+    <h1>Peliculas en cartelera:</h1>  
+<div class="row mt-3 ">
+   
+
+    <div class="col-md-4" *ngFor="let pelicula of peliculascg3">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ pelicula | noimg }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{pelicula.original_title}}</h5>
+              <p class="card-text text-justify">{{pelicula.overview | slice:0:200}}...</p>
+              <button  type="button" class="btn btn-outline-primary btn-block" (click)="verPelicula(pelicula.id,pelicula)" >Ver mas...</button>
+            </div>
+          </div>
+          <br>
+    </div>
+</div>
+</div>
+
+
+
+<div class="container" *ngIf="peliculascg" >
+    <h1>Peliculas Populares:</h1>  
+<div class="row mt-3 ">
+   
+
+    <div class="col-sm-4" *ngFor="let pelicula of peliculascg">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ pelicula | noimg }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{pelicula.original_title}}</h5>
+              <p class="card-text text-justify">{{pelicula.overview | slice:0:200}}...</p>
+              <button  class="btn btn-outline-primary btn-block "  (click)="verPelicula2(pelicula.id,pelicula)">Ver mas...</button>
+            </div>
+          </div>
+          <br>
+    </div>
+</div>
+</div>
+
+    <div class="container" *ngIf="peliculascg2" >
+    <h1>Peliculas niños populares:</h1>
+        <div class="row mt-3 ">
+    <div class="col-sm-4" *ngFor="let pelicula of peliculascg2">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ pelicula | noimg }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{pelicula.original_title}}</h5>
+              <p class="card-text text-justify">{{pelicula.overview | slice:0:200}}...</p>
+              <button  class="btn btn-outline-primary btn-block" (click)="verPelicula3(pelicula.id,pelicula)">Ver mas...</button>
+            </div>
+          </div>
+          <br>
+          </div>
+          </div>
+    </div>
